@@ -2,7 +2,7 @@
 
 /**
   * _abs - return abolute value of an integer
-  * @int: input value
+  * @num: input value
   * Return: return absolute value
   */
 int _abs(int num)
