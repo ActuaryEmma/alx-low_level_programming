@@ -11,8 +11,10 @@ int print_last_digit(int num)
 
 	if (last_digit < 0)
 	{
+		/* multiply the value by -1  to change from - to + */
 		last_digit *= -1;
 	}
+	/* 0 convert numeric digit to character in ascii table */
 	_putchar(last_digit + '0');
 	return (last_digit);
 }
