@@ -2,9 +2,10 @@
 #include <stdio.h>
 /**
   * main - Entry point
+  *
   * Return: Always (0) Success
   */
-void print _alphabet(void)
+void print_alphabet(void)
 {
 	int i;
 
@@ -13,5 +14,4 @@ void print _alphabet(void)
 		_putchar(i);
 	}
 	_putchar('\n');
-	return (0);
 }
