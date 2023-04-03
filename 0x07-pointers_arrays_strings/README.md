@@ -26,7 +26,7 @@ dest[i] = str[i]
 ****
 Task 3
 Write a function that locates a character in  a string
-strchr : find the first occurrence of a character in a string
+strchr : find the first occurrence of a specific character in a string
 takes two arguments string and a character
 char *strchr(const char *s, int c);
 s: pointer to a string in wich the search is performed
@@ -39,3 +39,31 @@ write a function that gets the length of a prefix substring
 strspn : calculates the length of initial substring of the string pointed to s.
 s: string to be searched
 accept: string with characters to be searched for
+
+****
+Task 5
+write a function that searches a string for any of the set of bytes
+strpbrk :find the first occurrence of any character in a set of characters in\ 
+in a string
+char *_strpbrk(char *s, char *accept);
+s: pointer to the string in which to search for charaters
+accept: pointer to the string with characters to be searched
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
