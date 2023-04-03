@@ -32,3 +32,10 @@ char *strchr(const char *s, int c);
 s: pointer to a string in wich the search is performed
 c: character to be searched in the string
 
+
+****
+Task 4
+write a function that gets the length of a prefix substring
+strspn : calculates the length of initial substring of the string pointed to s.
+s: string to be searched
+accept: string with characters to be searched for
