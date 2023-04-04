@@ -78,7 +78,7 @@ Write a function that sets the value of a pointer to a char
 
 *********************************************************************
 Task 9
-
+https://dev.to/hi_heavens/a-simple-cracked-pwrd-1ckg
 
 
 
