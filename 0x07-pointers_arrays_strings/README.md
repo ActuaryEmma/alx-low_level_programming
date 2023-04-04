@@ -62,6 +62,22 @@ strstr() : searches for the first occurrence of a substring in a string
 haystack: pointer to the string to be searched
 needle: pointer to the substring to searcch for
 
+***************************************************************************
+Task 6
+Write a function that prints the chessboard.
+
+    Prototype: void print_chessboard(char (*a)[8]);
+***************************************************************************
+Task 7
+Write a function that prints the sum of the two diagonals of a square matrix\ 
+of integers.
+
+****************************************************************************
+Task 8
+Write a function that sets the value of a pointer to a char
+
+*********************************************************************
+Task 9
 
 
 
