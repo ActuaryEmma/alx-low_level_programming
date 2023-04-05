@@ -3,11 +3,8 @@
   * is_prime_number - returns 1 if prime number else 0
   * prime_number - finds a prime number
   * @n: parameter
-  * @i: parameter
   * Return: 0
   */
-int prime_number(int n, int i);
-
 int is_prime_number(int n)
 {
 	if (n <= 1)
@@ -16,6 +13,12 @@ int is_prime_number(int n)
 	}
 	return (prime_number(n, n - 1));
 }
+/**
+  * prime_number - finds a prime number
+  * @n: parameter
+  * @i: parameter
+  * Return: 0
+  */
 
 int prime_number(int n, int i)
 {
@@ -29,4 +32,3 @@ int prime_number(int n, int i)
 	}
 	return (prime_number(n, i - 1));
 }
-
