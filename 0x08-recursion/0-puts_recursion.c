@@ -17,9 +17,11 @@ void _puts_recursion(char *s)
 	else
 	{
 		_putchar(*s);
-		/* the function call itself until the end of the string*/
-		/* when a character is printed the function increment to the\
-		   next character */
+		/**
+		  * the function call itself until the end of the string
+		  * when a character is printed the function increment to the\
+		   next character
+		  */
 		_puts_recursion(s + 1);
 	}
 }
