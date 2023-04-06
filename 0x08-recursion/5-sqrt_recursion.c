@@ -6,19 +6,35 @@
   */
 int _sqrt_recursion(int n)
 {
-	int result = 0;
-
-	if (n % 2 != 0)
+	if (n < 0)
 	{
 		return (-1);
 	}
-	if (n == 1)
+	else
 	{
-		return (1);
+		return (recursion(n, 0));
+	}
+}
+
+/**
+ * recursion - finds square root of a int
+ * @n: parameter
+ * @i: parameter
+ * Return: 0
+ */
+int recursion(int n, int i)
+{
+	if (i * i > n)
+	{
+		return (-1);
+	}
+	if (i * i == n)
+	{
+		return (i);
 	}
 	else
 	{
-		result = (n * _sqrt_recursion(n);
-		return (result);
+		return (recursion(n, i + 1));
 	}
 }
+
