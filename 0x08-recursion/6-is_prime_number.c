@@ -26,6 +26,7 @@ int prime_number(int n, int i)
 	{
 		return (1);
 	}
+	/* ensure we dont divide by 0 (i > 0) */
 	if (n % i == 0 && i > 0)
 	{
 		return (0);

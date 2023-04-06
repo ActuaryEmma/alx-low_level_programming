@@ -19,6 +19,7 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
+		/*(5, 2) = 5 * 5^1 * 5^0 */
 		result = (x * _pow_recursion(x, y - 1));
 		return (result);
 	}
