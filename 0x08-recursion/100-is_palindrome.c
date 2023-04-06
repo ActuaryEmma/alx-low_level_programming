@@ -10,11 +10,11 @@ int is_palindrome(char *s)
 	/* function from q3 */
 	int len = _strlen_recursion(s);
 
-        if (len == 0 || len == 1)
-        {
+	if (len == 0 || len == 1)
+	{
 		return (1);
-        }
-        return (_palindrome_recursion(s, 0, len - 1));
+	}
+	return (_palindrome_recursion(s, 0, len - 1));
 }
 #include "main.h"
 /**
@@ -46,7 +46,7 @@ int _strlen_recursion(char *s)
  * _palindrome_recursion - compare characters
  * @s: pointer to the  string
  * @i: parameter
- * @len: length of the string
+ * @j: parameter
  * Return: 1 if palindrome, 0 if not
  */
 int _palindrome_recursion(char *s, int i, int j)
