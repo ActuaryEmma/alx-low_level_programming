@@ -7,25 +7,39 @@
 
 int is_palindrome(char *s)
 {
-	if (*s == 0)
-	{
-		return (1);
-	}
-	return (_palindrome_recursion(s, 0, _palindrome(s)));
-}
+	/* function from q3 */
+	int len = _strlen_recursion(s);
 
+        if (len == 0 || len == 1)
+        {
+		return (1);
+        }
+        return (_palindrome_recursion(s, 0, len - 1));
+}
+#include "main.h"
 /**
- * _palindrome - returns the length of a string
- * @s: pointer to the string
- * Return: length of the string
- */
-int _palindrome(char *s)
+  * _strlen_recursion - returns the length of a string
+  * @s: pointer that points the string
+  * Return: length of a string
+  * len = 1 + (next character :element 2)_strlen_recursion(s + 1)
+  * len = 1 + 1 +(next character :element 3)_strlen_recursion(s + 1)
+  * len = 1 + 1 + 1 ...... + 1 + ('\0' element)_strlen_recursion(s + 1)
+  */
+int _strlen_recursion(char *s)
 {
+	int len = 0;
+/* base case */
 	if (*s == '\0')
 	{
 		return (0);
 	}
-	return (1 + _palindrome(s + 1));
+	else
+	{
+		/* assigns the value overwriting its current value */
+		len = 1 + _strlen_recursion(s + 1);
+	}
+
+	return (len);
 }
 
 /**
@@ -35,15 +49,19 @@ int _palindrome(char *s)
  * @len: length of the string
  * Return: 1 if palindrome, 0 if not
  */
-int _palindrome_recursion(char *s, int i, int len)
+int _palindrome_recursion(char *s, int i, int j)
 {
-	if (*(s + i) != *(s + len - 1))
-	{
-		return (0);
-	}
-	if (i >= len)
+	if (i > j)
 	{
 		return (1);
 	}
-	return (_palindrome_recursion(s, i + 1, len - 1));
+	else if (s[i] == s[j])
+	{
+		return (_palindrome_recursion(s, i + 1, j - 1));
+	}
+	else
+	{
+		return (0);
+	}
+
 }
