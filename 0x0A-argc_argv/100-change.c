@@ -16,8 +16,7 @@ int main(int argc, char *argv[])
 
 	int arr[] = {25, 10, 5, 2, 1};
 
-	/* the number of arguments should only be two,, name of the file and\
-	   amount.  */
+/* the number of arguments should only be two,, name of the file and\amount. */
 	if (argc != 2)
 	{
 		printf("Error\n");
