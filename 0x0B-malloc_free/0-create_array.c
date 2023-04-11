@@ -27,8 +27,11 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	/* if allocation was successful, the function intializes the array\
-	   with character c . c is assigned to each element in the array */
+	/**
+	  * if allocation was successful,
+	  * the function intializes the array with character c .
+	  * c is assigned to each element in the array
+	  */
 	for (i = 0; i < size; i++)
 	{
 		p[i] = c;
