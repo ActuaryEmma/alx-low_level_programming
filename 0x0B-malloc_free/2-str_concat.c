@@ -17,7 +17,8 @@ char *str_concat(char *s1, char *s2)
 	/* checks if any of the string is null */
 	if (s1 == NULL || s2 == NULL)
 	{
-		return (NULL);
+		s1 = "";
+		s2 = "";
 	}
 	/* length of first string s1 */
 	for (i = 0; s1[i] != '\0'; i++)
