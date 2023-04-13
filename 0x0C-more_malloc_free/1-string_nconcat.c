@@ -25,27 +25,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		count2++;
 	if (n >= count2)
 	{
-		p = malloc(count + count2 + 1);
-		if (p == NULL)
-			return (NULL);
-		for (i = 0; i < count; i++)
-			p[i] = s1[i];
-		for (j = 0; j < count2; j++, i++)
-			p[i] = s2[j];
+		n = count2;
 	}
-	else if (n < count2)
+	p = malloc(count + n + 1);
+	if (p == NULL)
 	{
-		p = malloc(count + n + 1);
-		if (p == NULL)
-			return (NULL);
-		for (i = 0; i < count; i++)
-		{
-			p[i] = s1[i];
-		}
-		for (j = 0; j < n; j++, i++)
-		{
-			p[i] = s2[j];
-		}
+		return (NULL);
+	}
+	for (i = 0; i < count; i++)
+	{
+		p[i] = s1[i];
+	}
+	for (j = 0; j < n; j++, i++)
+	{
+		p[i] = s2[j];
 	}
 	return (p);
 }
