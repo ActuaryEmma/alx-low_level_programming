@@ -17,7 +17,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
+	/* allocate memory */
 	p = malloc(nmemb * size);
+	/* check if allocation was successful */
 	if (p == NULL)
 	{
 		return (NULL);
@@ -26,7 +28,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	  * for (i = 0; i < nmemb * size; i++)
 	  * *((char*)p + i) = 0;
 	  */
-
+       /* memset sets block of memory(array of intgers) to value 0 */
 	memset(p, 0, nmemb * size);
 	return (p);
 }
