@@ -18,11 +18,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* check if string is NULL */
 	if (s1 == NULL)
 	{
-		s1 = " ";
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = " ";
+		s2 = "";
 	}
 
 	/* length of s1 */
@@ -43,6 +43,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			return (NULL);
 		}
+		for (i = 0; i < count; i++)
+		{
+			p[i] = s1[i];
+		}
+		for (j = 0; j < count2; j++, i++)
+		{
+			p[i] = s2[j];
+		}
 	}
 	/* memory allocation if n < length of s2 */
 	else if (n < count2)
@@ -52,26 +60,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			return (NULL);
 		}
-	}
-
-	/* combine s1 and s2 strings */
-	for (i = 0; i < count; i++)
-	{
-		p[i] = s1[i];
-	}
-	if (n >= count2)
-	{
-		for (j = 0; j < count2; j++, i++)
+		for (i = 0; i < count; i++)
 		{
-			p[i] = s2[j];
+			p[i] = s1[i];
 		}
-	}
-	else
-	{
 		for (j = 0; j < n; j++, i++)
 		{
 			p[i] = s2[j];
 		}
+		p[i] = '\0';
 	}
 	return (p);
 }
