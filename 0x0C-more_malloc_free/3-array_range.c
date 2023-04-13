@@ -26,7 +26,6 @@ int *array_range(int min, int max)
 	{
 		/**
 		  * increment the value min
-		  * eg if min = 0 , p[0] = 0 + 0, p[1] = 0 + 1, p[2] = 0 + 2
 		  */
 		p[i] = min++;
 	}
