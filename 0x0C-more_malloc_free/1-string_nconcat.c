@@ -31,7 +31,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = count2;
 	}
 	/* allocate memory(ln 34) and if success concatenate strings (39-46)*/
-	p = malloc(count + n + 1);
+	/* char * indicates which datatype to allocate the space */
+	p = (char *)malloc(count + n + 1);
 	if (p == NULL)
 	{
 		return (NULL);
