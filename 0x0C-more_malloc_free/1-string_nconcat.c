@@ -15,18 +15,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int count = 0;
 	unsigned int count2 = 0;
 
+	/* check if string is null */
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	/* find length of te strings */
 	for (i = 0; s1[i] != '\0'; i++)
 		count++;
 	for (i = 0; s2[i] != '\0'; i++)
 		count2++;
+	/* check if n is greater than length of the string */
 	if (n >= count2)
 	{
 		n = count2;
 	}
+	/* allocate memory(ln 34) and if success concatenate strings (39-46)*/
 	p = malloc(count + n + 1);
 	if (p == NULL)
 	{
@@ -40,6 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		p[i] = s2[j];
 	}
+	/* indicate end of string after concatinating*/
 	p[i] = '\0';
 	return (p);
 }
