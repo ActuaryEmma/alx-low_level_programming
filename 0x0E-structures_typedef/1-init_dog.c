@@ -11,10 +11,12 @@
   */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	/* allocate memory is the pointer is null */
 	if (d == NULL)
 	{
-		return;
+		d = malloc(sizeof(struct dog));
 	}
+	/* initialize the variables */
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
