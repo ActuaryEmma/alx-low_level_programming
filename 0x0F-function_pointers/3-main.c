@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	operator = argv[2];
 
 	/* if the operator is none*/
-	if (get_op_func(operator) == NULL || operator[1] != '\0')
+	if (get_op_func(operator) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
