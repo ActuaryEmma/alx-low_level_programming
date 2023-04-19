@@ -11,11 +11,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	unsigned long i;
 
 	/* check if null for size and action pointer */
-	if (size == 0 || action == NULL)
+	if (size == NULL || action == NULL)
 	{
 		return;
 	}
-	/* iterate through the elements of array */
+	/* iterate through the elements of array  */
 	for (i = 0; i < size; i++)
 	{
 		action(array[i]);
