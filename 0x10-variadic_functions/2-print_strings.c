@@ -18,14 +18,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		var_str = va_arg(mylist, char*);
-
-		if (var_str != NULL)
+		if (var_str == NULL)
 		{
-			printf("%s", var_str);
+			printf("nil");
 		}
 		else
 		{
-			printf("(nil)");
+			printf("%s", var_str);
 		}
 		if (separator != NULL && i < n - 1)
 		{
