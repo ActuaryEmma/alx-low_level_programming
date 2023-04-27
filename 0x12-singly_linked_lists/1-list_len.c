@@ -6,7 +6,10 @@
   */
 size_t list_len(const list_t *h)
 {
+	/* count keep the number of elements present*/
 	int count = 0;
+
+	/* only count the elements when h != NULL*/
 	while (h != NULL)
 	{
 		h = h->next;
