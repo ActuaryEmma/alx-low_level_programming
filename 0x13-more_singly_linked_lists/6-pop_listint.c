@@ -10,13 +10,17 @@ int pop_listint(listint_t **head)
 	int data_n;
 
 	temp = *head;
+	/* if head is NULL return zero */
 	if (*head == NULL)
 	{
 		return (0);
 	}
-
+	/* point to the next node when nt empty */
 	*head = (*head)->next;
+	/* data_n store the value that was deleted */
 	data_n = temp->n;
+	/* free the memory of the value that was deleted*/
 	free(temp);
+	/*return the value of the deleted head node*/
 	return (data_n);
 }
