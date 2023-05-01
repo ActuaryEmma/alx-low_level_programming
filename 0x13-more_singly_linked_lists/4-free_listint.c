@@ -1,6 +1,7 @@
 #include "lists.h"
 /**
   * free_listint - free the memory
+  * @head: pointer
   */
 void free_listint(listint_t *head)
 {
