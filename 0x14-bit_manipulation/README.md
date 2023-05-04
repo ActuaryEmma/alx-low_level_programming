@@ -18,6 +18,17 @@ Write a function that prints the binary representation of a number.
     You are not allowed to use malloc
     You are not allowed to use the % or / operators
 
+    **************************************************
+    Here are the general steps to convert an integer to binary:
+
+    Determine the binary place values: Start with the rightmost bit, which represents 2^0. The next bit to the left represents 2^1, then 2^2, and so on, with each bit to the left representing the next power of two.
+
+    Divide the decimal number by 2: Divide the decimal number by 2 and note down the quotient and the remainder.
+
+    Repeat the process: Divide the quotient by 2 and again note down the quotient and remainder. Continue this process until the quotient is 0.
+
+    Write the binary number: Write down the remainders in reverse order, starting from the bottom, to get the binary equivalent of the decimal number.
+    ***************************************************
 Task 2
 Write a function that returns the value of a bit at a given index.
 
