@@ -1,11 +1,11 @@
 #include "main.h"
 /**
-  * set_bit - sets the value of a bit to 1 ata agiven index
+  * clear_bit - sets the value of a bit to 0 at a given index
   * @n: pointer
   * @index: is the index starting from 0 of the bit you want to set
   * Return: 1 if it worked or -1 if an error occured
   */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int f = 1;
 
@@ -21,6 +21,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	}
 	/* f<<index : shift the binary representation of a number to the left*/
-	*n = *n | (f << index);
+	*n = *n & ~(f << index);
 	return (1);
 }
+
