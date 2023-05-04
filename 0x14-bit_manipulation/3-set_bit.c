@@ -20,7 +20,13 @@ int set_bit(unsigned long int *n, unsigned int index)
 	{
 		return (-1);
 	}
-	/* f<<index : shift the binary representation of a number to the left*/
+	/**
+	  * f<<index : shift the binary representation of a number to the left
+	  * f = f << index = f = 1 << index
+	  * eg index 1 , f = 1 << 1 = 00000010
+	  * *n = 10001001 f=00000010
+	  * *n | (f) = 10001011
+	  */
 	*n = *n | (f << index);
 	return (1);
 }
