@@ -67,6 +67,8 @@ Write a function that checks the endianness.
 Task 7
 
 https://medium.com/@bilalbarki/finding-a-password-for-a-protected-file-the-very-basics-3da88a26f37e
+To add password to 101-password file: echo $'Hol\x4' > 101-password
+
 Find the password for this program.
 
     Save the password in the file 101-password
