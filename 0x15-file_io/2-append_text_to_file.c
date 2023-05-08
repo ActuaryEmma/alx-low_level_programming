@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/stat.h>
 /**
   * append_text_to_file - append texts at the end of the file
   * @filename: name of the file
@@ -14,7 +17,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	file = fopen(filename, O_APPEND);
+	file = fopen(filename, "a");
 	if (file == NULL)
 	{
 		return (-1);
@@ -26,6 +29,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	fclose(file);
+	if (chmod(filename, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) == -1)
+		return (-1);
 	return (1);
 }
 
