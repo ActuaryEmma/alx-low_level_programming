@@ -1,9 +1,11 @@
-#include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
 /**
-  *
+  * create_file - creates a file
+  * @filename: name of the file to create
+  * @text_content: content to be added to the file
+  * Return: 1 for success, -1 for failure
   */
 int create_file(const char *filename, char *text_content)
 {
@@ -14,7 +16,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	file = fopen(filename, "w+");
+	file = fopen(filename, "a");
 	if (file == NULL)
 	{
 		return (-1);
