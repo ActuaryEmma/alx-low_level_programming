@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	if (file_from == -1)
 		error_exit("Error: Can't read from file", 98);
 
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0666);
 	if (file_to == -1)
 		error_exit("Error: Can't write to file", 99);
 
