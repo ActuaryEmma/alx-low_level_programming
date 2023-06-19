@@ -26,10 +26,14 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
 Solution
+#### create object files
 1. gcc -c -fPIC *.c
+#### link object files into a dynamic library
 2. gcc *.o -shared -o libdynamic.so
+#### inspect/ list symbols in libraries/object files
 3. nm -D libdynamic.so 
-4. LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+#### 
+4. export  LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 5. gcc -Wall -pedantic -Werror -Wextra -L. 0-main.c -ldynamic -o len
 6. ldd len
 
