@@ -1,0 +1,13 @@
+CC = gcc
+
+SRC = main.c school.c
+
+.PHONY: all clean
+
+all: school
+
+school: $(SRC)
+	$(CC) -o school $(SRC)
+
+clean:
+	rm -f school
